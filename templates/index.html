@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Smart Home UI</title>
+</head>
+
+<body>
+    <h1>Velkommen til Smart Home UI</h1>
+    <p>Udfyld formen for at sende en besked.</p>
+    <form action="/send_message" method="POST">
+        <!-- lav labels og input for hostname, afsender, modtager, osv. -->
+        <label for="receiver_host">Hostname (for eksempel mikkelpi.local:8000):</label>
+        <input type="text" name="receiver_host" id="receiver_host" required>
+        <br /><br />
+        <label for="receiever_name">Modtager (for eksempel Mikkel):</label>
+        <input type="text" name="receiever_name" id="receiever_name" required>
+        <br /><br />
+        <label for="sender_name">Afsender (dit navn):</label>
+        <input type="text" name="sender_name" id="sender_name" required>
+        <br /><br />
+        <label for ="type">Vælg type:</label>
+        <select name="type" id="type" required>
+            <option value="message">Besked</option>
+            <option value="heart">Hjerte</option>
+            <option value="smiley">Smiley</option>
+        </select>
+        <br /><br />
+        <label for="color">Vælg farve:</label>
+        <select name="color" id="color" required>
+            <option value="blue">Blå</option>
+            <option value="green">Grøn</option>
+            <option value="yellow">Gul</option>
+            <option value="red">Rød</option>
+            <option value="pink">Lyserød</option>
+        </select>
+        <br />
+        <p>Hvis du har valgt smiley skal besked indeholde "happy" eller "sad" som humør.</p>
+        <label for="content">Besked:</label>
+        <input type="text" name="content" id="content">
+        <br />
+        <br />
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
